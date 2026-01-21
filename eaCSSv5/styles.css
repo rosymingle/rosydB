@@ -1,0 +1,592 @@
+/*------- ROWS & TILES -------*/
+
+/* GRID */
+
+.eacss [class*="tiles-"] {
+  	display: grid;
+	gap: 10px;
+}
+.eacss .untile, .eacss .untiles {
+  	display: block;
+}
+.eacss .tiles-2up {
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.eacss .tiles-3up {
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.eacss .tiles-4up {
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.eacss .tiles-5up {
+	grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+.eacss .tiles-6up {
+	grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+.eacss .tiles-7up {
+	grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+.eacss .tiles-8up {
+	grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+.eacss .tiles-9up {
+	grid-template-columns: repeat(9, minmax(0, 1fr));
+}
+.eacss .tiles-10up {
+	grid-template-columns: repeat(10, minmax(0, 1fr));
+}
+
+/* BORDERS */
+.eacss [class*=brdr-] {
+	border-style: solid;
+	border-width: 0;
+}
+.eacss .brdr-0 {
+	border-width: 0;
+}
+.eacss .brdr-1 {
+	border-width: 1px;
+}
+.eacss .brdr-2 {
+	border-width: 2px;
+}
+.eacss .brdr-3 {
+	border-width: 3px;
+}
+.eacss .brdr-4 {
+	border-width: 4px;
+}
+.eacss .brdr-5 {
+	border-width: 5px;
+}
+.eacss .brdr-6 {
+	border-width: 6px;
+}
+.eacss .brdr-7 {
+	border-width: 7px;
+}
+.eacss .brdr-8 {
+	border-width: 8px;
+}
+.eacss .brdr-10 {
+	border-width: 10px;
+}
+.eacss .brdr-t-1 {
+	border-top-width: 1px;
+}
+.eacss .brdr-t-2 {
+	border-top-width: 2px;
+}
+.eacss .brdr-t-3 {
+	border-top-width: 3px;
+}
+.eacss .brdr-t-4 {
+	border-top-width: 4px;
+}
+.eacss .brdr-t-5 {
+	border-top-width: 5px;
+}
+.eacss .brdr-t-6 {
+	border-top-width: 6px;
+}
+.eacss .brdr-t-8 {
+	border-top-width: 8px;
+}
+.eacss .brdr-t-10 {
+	border-top-width: 10px;
+}
+.eacss .brdr-b-1 {
+	border-bottom-width: 1px;
+}
+.eacss .brdr-b-2 {
+	border-bottom-width: 2px;
+}
+.eacss .brdr-b-3 {
+	border-bottom-width: 3px;
+}
+.eacss .brdr-b-4 {
+	border-bottom-width: 4px;
+}
+.eacss .brdr-b-5 {
+	border-bottom-width: 5px;
+}
+.eacss .brdr-b-6 {
+	border-bottom-width: 6px;
+}
+.eacss .brdr-b-8 {
+	border-bottom-width: 8px;
+}
+.eacss .brdr-b-10 {
+	border-bottom-width: 10px;
+}
+.eacss .brdr-l-1 {
+	border-left-width: 1px;
+}
+.eacss .brdr-l-2 {
+	border-left-width: 2px;
+}
+.eacss .brdr-l-3 {
+	border-left-width: 3px;
+}
+.eacss .brdr-l-4 {
+	border-left-width: 4px;
+}
+.eacss .brdr-l-5 {
+	border-left-width: 5px;
+}
+.eacss .brdr-l-6 {
+	border-left-width: 6px;
+}
+.eacss .brdr-l-8 {
+	border-left-width: 8px;
+}
+.eacss .brdr-l-10 {
+	border-left-width: 10px;
+}
+.eacss .brdr-r-1 {
+	border-right-width: 1px;
+}
+.eacss .brdr-r-2 {
+	border-right-width: 2px;
+}
+.eacss .brdr-r-3 {
+	border-right-width: 3px;
+}
+.eacss .brdr-r-4 {
+	border-right-width: 4px;
+}
+.eacss .brdr-r-5 {
+	border-right-width: 5px;
+}
+.eacss .brdr-r-6 {
+	border-right-width: 6px;
+}
+.eacss .brdr-r-8 {
+	border-right-width: 8px;
+}
+.eacss .brdr-r-10 {
+	border-right-width: 10px;
+}
+/* BORDER RADIUS */
+.eacss .brad-0 {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+.eacss .brad-1 {
+	-webkit-border-radius: 1px;
+	-moz-border-radius: 1px;
+	border-radius: 1px;
+}
+.eacss .brad-2 {
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+.eacss .brad-3 {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+.eacss .brad-4 {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+.eacss .brad-5 {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.eacss .brad-6 {
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+.eacss .brad-7 {
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+}
+.eacss .brad-8 {
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+.eacss .brad-9 {
+	-webkit-border-radius: 9px;
+	-moz-border-radius: 9px;
+	border-radius: 9px;
+}
+.eacss .brad-10 {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+.eacss .brad-12 {
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+}
+.eacss .brad-15 {
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+.eacss .brad-20 {
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+}
+.eacss .brad-1p {
+	-webkit-border-radius: 1%;
+	-moz-border-radius: 1%;
+	border-radius: 1%;
+}
+.eacss .brad-2p {
+	-webkit-border-radius: 2%;
+	-moz-border-radius: 2%;
+	border-radius: 2%;
+}
+.eacss .brad-3p {
+	-webkit-border-radius: 3%;
+	-moz-border-radius: 3%;
+	border-radius: 3%;
+}
+.eacss .brad-4p {
+	-webkit-border-radius: 4%;
+	-moz-border-radius: 4%;
+	border-radius: 4%;
+}
+.eacss .brad-5p {
+	-webkit-border-radius: 5%;
+	-moz-border-radius: 5%;
+	border-radius: 5%;
+}
+.eacss .brad-6p {
+	-webkit-border-radius: 6%;
+	-moz-border-radius: 6%;
+	border-radius: 6%;
+}
+.eacss .brad-7p {
+	-webkit-border-radius: 7%;
+	-moz-border-radius: 7%;
+	border-radius: 7%;
+}
+.eacss .brad-8p {
+	-webkit-border-radius: 8%;
+	-moz-border-radius: 8%;
+	border-radius: 8%;
+}
+.eacss .brad-9p {
+	-webkit-border-radius: 9%;
+	-moz-border-radius: 9%;
+	border-radius: 9%;
+}
+.eacss .brad-10p {
+	-webkit-border-radius: 10%;
+	-moz-border-radius: 10%;
+	border-radius: 10%;
+}
+.eacss .brad-12p {
+	-webkit-border-radius: 12%;
+	-moz-border-radius: 12%;
+	border-radius: 12%;
+}
+.eacss .brad-15p {
+	-webkit-border-radius: 15%;
+	-moz-border-radius: 15%;
+	border-radius: 15%;
+}
+.eacss .brad-20p {
+	-webkit-border-radius: 20%;
+	-moz-border-radius: 20%;
+	border-radius: 20%;
+}
+.eacss .brad-25p {
+	-webkit-border-radius: 25%;
+	-moz-border-radius: 25%;
+	border-radius: 25%;
+}
+.eacss .brad-30p {
+	-webkit-border-radius: 30%;
+	-moz-border-radius: 30%;
+	border-radius: 30%;
+}
+.eacss .brad-40p {
+	-webkit-border-radius: 40%;
+	-moz-border-radius: 40%;
+	border-radius: 40%;
+}
+.eacss .brad-50p,
+.eacss .round,
+.eacss .circle {
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+/* GRAYSCALE COLORS */
+.eacss .white {
+	color: #ffffff;
+}
+.eacss .black {
+	color: #000000;
+}
+.eacss .black-dj {
+	color: #101116;
+}
+.eacss .grey-1 {
+	color: #111;
+}
+.eacss .grey-2 {
+	color: #222;
+}
+.eacss .grey-3 {
+	color: #333;
+}
+.eacss .grey-4 {
+	color: #444;
+}
+.eacss .grey-5 {
+	color: #555;
+}
+.eacss .grey-6 {
+	color: #666;
+}
+.eacss .grey-7 {
+	color: #777;
+}
+.eacss .grey-8 {
+	color: #888;
+}
+.eacss .grey-9 {
+	color: #999;
+}
+.eacss .grey-a {
+	color: #aaa;
+}
+.eacss .grey-b {
+	color: #bbb;
+}
+.eacss .grey-c {
+	color: #ccc;
+}
+.eacss .grey-d {
+	color: #ddd;
+}
+.eacss .grey-e {
+	color: #eee;
+}
+.eacss .grey-ef {
+	color: #efefef;
+}
+.eacss .grey-f5 {
+	color: #f5f5f5;
+}
+.eacss .grey-f6 {
+	color: #f6f6f6;
+}
+.eacss .grey-f9 {
+	color: #f9f9f9;
+}
+/* GRAYSCALE BACKGROUND COLOURS*/
+.eacss .bg-white {
+	background-color: #ffffff;
+}
+.eacss .bg-black {
+	background-color: #000000;
+}
+.eacss .bg-black-dj {
+	background-color: #101116;
+}
+.eacss .bg-grey-1 {
+	background-color: #111;
+}
+.eacss .bg-grey-2 {
+	background-color: #222;
+}
+.eacss .bg-grey-3 {
+	background-color: #333;
+}
+.eacss .bg-grey-4 {
+	background-color: #444;
+}
+.eacss .bg-grey-5 {
+	background-color: #555;
+}
+.eacss .bg-grey-6 {
+	background-color: #666;
+}
+.eacss .bg-grey-7 {
+	background-color: #777;
+}
+.eacss .bg-grey-8 {
+	background-color: #888;
+}
+.eacss .bg-grey-9 {
+	background-color: #999;
+}
+.eacss .bg-grey-a {
+	background-color: #aaa;
+}
+.eacss .bg-grey-b {
+	background-color: #bbb;
+}
+.eacss .bg-grey-c {
+	background-color: #ccc;
+}
+.eacss .bg-grey-d {
+	background-color: #ddd;
+}
+.eacss .bg-grey-e {
+	background-color: #eee;
+}
+.eacss .bg-grey-ef {
+	background-color: #efefef;
+}
+.eacss .bg-grey-f5 {
+	background-color: #f5f5f5;
+}
+.eacss .bg-grey-f6 {
+	background-color: #f6f6f6;
+}
+.eacss .bg-grey-f7 {
+	background-color: #f7f7f7;
+}
+.eacss .bg-grey-f8 {
+	background-color: #f8f8f8;
+}
+.eacss .bg-grey-f9 {
+	background-color: #f9f9f9;
+}
+.eacss .bg-grey-fa {
+	background-color: #fafafa;
+}
+.eacss .bg-grey-fb {
+	background-color: #fbfbfb;
+}
+.eacss .bg-grey-fc {
+	background-color: #fcfcfc;
+}
+.eacss .bg-grey-fd {
+	background-color: #fdfdfd;
+}
+.eacss .bg-grey-fe {
+	background-color: #fefefe;
+}
+.eacss .bg-white-90 {
+	background-color: rgba(255,255,255,0.9);
+}
+.eacss .bg-white-80 {
+	background-color: rgba(255,255,255,0.8);
+}
+.eacss .bg-white-70 {
+	background-color: rgba(255,255,255,0.7);
+}
+.eacss .bg-white-60 {
+	background-color: rgba(255,255,255,0.6);
+}
+.eacss .bg-white-50 {
+	background-color: rgba(255,255,255,0.5);
+}
+.eacss .bg-white-40 {
+	background-color: rgba(255,255,255,0.4);
+}
+.eacss .bg-white-30 {
+	background-color: rgba(255,255,255,0.3);
+}
+.eacss .bg-white-20 {
+	background-color: rgba(255,255,255,0.2);
+}
+.eacss .bg-white-10 {
+	background-color: rgba(255,255,255,0.1);
+}
+.eacss .bg-black-90 {
+	background-color: rgba(0,0,0,0.9);
+}
+.eacss .bg-black-80 {
+	background-color: rgba(0,0,0,0.8);
+}
+.eacss .bg-black-70 {
+	background-color: rgba(0,0,0,0.7);
+}
+.eacss .bg-black-60 {
+	background-color: rgba(0,0,0,0.6);
+}
+.eacss .bg-black-50 {
+	background-color: rgba(0,0,0,0.5);
+}
+.eacss .bg-black-40 {
+	background-color: rgba(0,0,0,0.4);
+}
+.eacss .bg-black-30 {
+	background-color: rgba(0,0,0,0.3);
+}
+.eacss .bg-black-20 {
+	background-color: rgba(0,0,0,0.2);
+}
+.eacss .bg-black-10 {
+	background-color: rgba(0,0,0,0.1);
+}
+/* GRAYSCALE BORDER COLOURS */
+.eacss .brdr-white {
+	border-color: #ffffff;
+}
+.eacss .brdr-black {
+	border-color: #000000;
+}
+.eacss .brdr-black-dj {
+	border-color: #101116;
+}
+.eacss .brdr-grey-1 {
+	border-color: #111;
+}
+.eacss .brdr-grey-2 {
+	border-color: #222;
+}
+.eacss .brdr-grey-3 {
+	border-color: #333;
+}
+.eacss .brdr-grey-4 {
+	border-color: #444;
+}
+.eacss .brdr-grey-5 {
+	border-color: #555;
+}
+.eacss .brdr-grey-6 {
+	border-color: #666;
+}
+.eacss .brdr-grey-7 {
+	border-color: #777;
+}
+.eacss .brdr-grey-8 {
+	border-color: #888;
+}
+.eacss .brdr-grey-9 {
+	border-color: #999;
+}
+.eacss .brdr-grey-a {
+	border-color: #aaa;
+}
+.eacss .brdr-grey-b {
+	border-color: #bbb;
+}
+.eacss .brdr-grey-c {
+	border-color: #ccc;
+}
+.eacss .brdr-grey-d {
+	border-color: #ddd;
+}
+.eacss .brdr-grey-e {
+	border-color: #eee;
+}
+.eacss .brdr-grey-ef {
+	border-color: #efefef;
+}
+.eacss .brdr-grey-f5 {
+	border-color: #f5f5f5;
+}
+.eacss .brdr-grey-f6 {
+	border-color: #f6f6f6;
+}
