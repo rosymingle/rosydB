@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	class SmartFileLoader {
 		constructor() {
-			this.frontendBase = "https://www.davidjones.com/images/assetimages/frontend/eacss/v4/";
-			this.versionSuffix = "?v103";
+			this.frontendBase = "/eaCSSv5/";
+			this.versionSuffix = "";
 			this.loadedFiles = new Set();
 			this.observedElements = new WeakSet();
 			this.preconnected = false;
