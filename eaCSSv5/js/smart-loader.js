@@ -1,0 +1,276 @@
+document.addEventListener("DOMContentLoaded", () => {
+	const shouldRunSmartLoader = Array.from(document.querySelectorAll('.eacss')).some(el => {
+		const style = getComputedStyle(el);
+		return el.classList.contains('preload') || (
+			style.display !== 'none' && style.visibility !== 'hidden'
+		);
+	});
+
+	if (!shouldRunSmartLoader) return;
+
+	class SmartFileLoader {
+		constructor() {
+			this.frontendBase = 'https://www.davidjones.com/images/assetimages/frontend/eacss/v4/';
+			this.versionSuffix = '?v23';
+			this.loadedFiles = new Set();
+			this.observedElements = new WeakSet();
+		}
+
+		async loadFile(file, callback) {
+			const isJS = file.endsWith('.js'), isCSS = file.endsWith('.css');
+			if (!isJS && !isCSS || this.loadedFiles.has(file)) return;
+
+			const isExternal = /^https?:\/\//i.test(file);
+			const fileURL = isExternal ? file : this.frontendBase + file + this.versionSuffix;
+
+			const cleanURL = fileURL.split('?')[0];
+			if ([...document.querySelectorAll(isJS ? 'script' : 'link')].some(el => (el.src || el.href || '').split('?')[0] === cleanURL)) return;
+
+			const el = isJS
+				? this.createElement('script', { src: fileURL, async: true })
+				: this.createElement('link', { rel: 'stylesheet', href: fileURL });
+
+			el.onload = () => callback?.();
+			document.head.appendChild(el);
+			this.loadedFiles.add(file);
+		}
+
+		createElement(tag, attrs) {
+			const el = document.createElement(tag);
+			Object.keys(attrs).forEach(attr => el.setAttribute(attr, attrs[attr]));
+			return el;
+		}
+
+		loadCoreFiles() {
+			const coreEls = document.querySelectorAll('.eacss');
+			if (!coreEls.length) return;
+
+			const allClasses = new Set();
+			coreEls.forEach(el => el.classList.forEach(cls => allClasses.add(cls)));
+
+			const coreFiles = [
+				'ea.css',
+				allClasses.has('full-wid') && 'full-width.css'
+			].filter(Boolean);
+
+			coreFiles.forEach(file => this.loadFile(file));
+
+			if (allClasses.has('blocker')) {
+				this.addBlockerClass();
+			}
+
+			if (allClasses.has('preload')) {
+				this.showPreloader();
+				setTimeout(() => coreEls.forEach(el => el.classList.remove('preload')), 500);
+			}
+
+			coreEls.forEach(el => ['js', 'css'].forEach(type =>
+				el.dataset[type]?.split(',').map(f => f.trim()).forEach(f => this.loadFile(f))
+			));
+		}
+
+		loadLazyFiles() {
+			const lazyItems = [
+				{ sel: '.eacss .accordion-section', files: ['js/accordion.min.js', 'accordion.min.css'] },
+				{ sel: '.eacss .countdown', files: ['js/countdown.min.js'] },
+				{ sel: '.eacss .video[data-pid]', files: ['js/video.min.js'] }
+			];
+
+			lazyItems.forEach(({ sel, files, callback }) => {
+				this.observeElement(sel, files, callback);
+			});
+
+			document.querySelectorAll('.eacss [data-loader]').forEach(el =>
+				this.observeElement(el, el.dataset.loader.split(',').map(f => f.trim()))
+			);
+
+			new MutationObserver(mutations => {
+				mutations.forEach(mutation => {
+					mutation.addedNodes.forEach(node => {
+						if (node.nodeType === 1) {
+							if (node.matches?.('.eacss [data-loader]')) {
+								const files = node.dataset.loader.split(',').map(f => f.trim());
+								this.observeElement(node, files);
+							}
+							if (node.querySelectorAll) {
+								node.querySelectorAll('.eacss [data-loader]').forEach(el => {
+									const files = el.dataset.loader.split(',').map(f => f.trim());
+									this.observeElement(el, files);
+								});
+							}
+						}
+					});
+				});
+			}).observe(document.body, { childList: true, subtree: true });
+		}
+
+		observeElement(selectorOrElement, files = [], callback = null) {
+			const elements = typeof selectorOrElement === 'string'
+				? document.querySelectorAll(selectorOrElement)
+				: [selectorOrElement];
+
+			elements.forEach(el => {
+				if (this.observedElements.has(el)) return;
+				this.observedElements.add(el);
+
+				const observer = new IntersectionObserver((entries, observer) => {
+					if (entries.some(e => e.isIntersecting)) {
+						files.forEach(f => this.loadFile(f));
+						if (callback) callback(el);
+						observer.unobserve(el);
+					}
+				}, { rootMargin: '100px 0px' });
+
+				observer.observe(el);
+			});
+		}
+
+		addBlockerClass() {
+			document.querySelectorAll('#main [class*="-container"]').forEach(el =>
+				el.classList.add('blocker')
+			);
+		}
+
+		showPreloader() {
+			const preloaderImage = document.createElement("img");
+			preloaderImage.id = 'pre-load-gif';
+			preloaderImage.src = 'https://res.cloudinary.com/david-jones/image/upload/f_auto,q_auto/v8/eacss/v4/img/spin.gif';
+			preloaderImage.style = `
+				display: block;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin: 0;
+				width: 64px;
+				height: 64px;
+				transform: translate(-50%, -50%);
+			`;
+
+			const wbn = window.outerWidth < 1024 ? '70px' : '150px';
+
+			const preloaderContainer = document.createElement("div");
+			preloaderContainer.id = 'pre-load-bg';
+			preloaderContainer.style = `
+				position: fixed;
+				top: ${wbn};
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-color: #ffffff;
+				z-index: 98;
+				-webkit-transition: opacity 300ms, visibility 300ms;
+				transition: opacity 300ms, visibility 300ms;
+			`;
+
+			preloaderContainer.appendChild(preloaderImage);
+			document.body.insertBefore(preloaderContainer, document.body.firstChild);
+			document.body.style.overflow = 'hidden';
+
+			window.addEventListener('load', () => {
+				setTimeout(() => {
+					const gif = document.getElementById('pre-load-gif');
+					if (gif) gif.style.display = 'none';
+
+					const bg = document.getElementById('pre-load-bg');
+					if (bg) bg.style.display = 'none';
+
+					document.body.style.overflow = 'auto';
+				}, 1000);
+			});
+		}
+
+		init() {
+			this.loadCoreFiles();
+			this.loadLazyFiles();
+		}
+	}
+
+	new SmartFileLoader().init();
+
+	const initSmartSlick = ($slider) => {
+		if ($slider.children().length === 0) return;
+
+		let slickOptions = {};
+		const slickAttr = $slider.attr('data-slick');
+		if (slickAttr) {
+			try {
+				slickOptions = JSON.parse(slickAttr);
+			} catch (e) {
+				console.warn('Invalid data-slick JSON:', slickAttr);
+			}
+		}
+
+		// Handle variableWidth as a shortcut
+		if ($slider.hasClass('variableWidth')) {
+			slickOptions.variableWidth = true;
+			if (!slickAttr) {
+				slickOptions.infinite = false;
+				slickOptions.slidesToScroll = 1;
+			}
+		}
+
+		// Skip if already initialised
+		if ($slider.hasClass('slick-initialized')) return;
+
+		try {
+			$slider.slick(slickOptions);
+		} catch (err) {
+			console.error('Slick initialization failed:', err);
+		}
+
+		// Right-edge correction for variableWidth
+		if ($slider.hasClass('variableWidth')) {
+			$slider.on('setPosition', function () {
+				const $track = $slider.find('.slick-track');
+				const $slides = $slider.find('.slick-slide');
+				const containerWidth = $slider.width();
+				const totalSlideWidth = $slides.toArray().reduce((acc, slide) => acc + $(slide).outerWidth(true), 0);
+
+				if (totalSlideWidth > containerWidth) {
+					const maxScroll = totalSlideWidth - containerWidth;
+					$track.css('transform', `translate3d(-${maxScroll}px, 0, 0)`);
+
+					$slider.off('beforeChange');
+					$slider.on('beforeChange', () => {
+						$track.css('transform', '');
+					});
+				}
+			});
+		}
+	};
+
+	// Watch and re-init on resize
+	const smartSlickObserve = ($slider) => {
+		let wasUnslicked = false;
+
+		const checkAndInit = () => {
+			if (!$slider.hasClass('slick-initialized')) {
+				initSmartSlick($slider);
+				wasUnslicked = false;
+			} else if ($slider.hasClass('unslicked')) {
+				wasUnslicked = true;
+			}
+		};
+
+		checkAndInit();
+
+		const observer = new ResizeObserver(checkAndInit);
+		observer.observe($slider[0]);
+
+		window.addEventListener('resize', () => {
+			setTimeout(checkAndInit, 200); // debounce-ish
+		});
+	};
+
+	// Apply to all
+	$('.slick-data').each(function () {
+		const $slider = $(this);
+		smartSlickObserve($slider);
+	});
+	$('.showthething').click(function() {
+		$(this).parent().find('.thething').slideToggle('fast');
+		$(this).find('.icon').toggleClass('flipthething');
+		return false
+	});
+
+});
