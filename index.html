@@ -70,8 +70,8 @@
 					<div class="pad-lr-20 m-pad-lr-15">
 						<div class="wrapper-800">
 							<h3>contact</h2>
-							<p><span class="fw-5 ls-n06" style="color:#ff99cc">rosy<span class="fw-6 ls-n12" style="color:#009090">dB</span> is based Melbourne.</p>
-							<a href="#" id="phone-link" class="cta-border rosy-contact"><span id="phone-text">call rosy</span></a>
+							<p><span class="fw-5 ls-n06" style="color:#ff99cc">rosy<span class="fw-6 ls-n12" style="color:#009090">dB</span></span> is based Melbourne.</p>
+							<a href="#" id="phone-link" class="cta-border rosy-contact"><span id="phone-text">call <span class="fw-5 ls-n06" style="color:#ff99cc">rosy<span class="fw-6 ls-n12" style="color:#009090">dB</span></span></span></a>
 							<script>
 								document.addEventListener("DOMContentLoaded", () => {
 								  const phoneLink = document.getElementById("phone-link");
@@ -101,21 +101,18 @@
 								  });
 								});
 							</script>
-							<form action="https://formspree.io/f/mreeyndk" method="POST" class="rosy-form">
+							<form action="https://formspree.io/f/mreeyndk" method="POST" class="wrapper-800 rosy-form">
 								
-								  <div class="form-group">
-								    <label for="name">Name / Band Name</label>
-								    <input type="text" name="name" id="name" required placeholder="Who are you?">
+								  <div class="form-group pad-tb-10">
+								    <input class="wid-100" type="text" name="name" id="name" required placeholder="Name">
 								  </div>
 								
-								  <div class="form-group">
-								    <label for="email">Email Address</label>
-								    <input type="email" name="_replyto" id="email" required placeholder="Where do I reply?">
+								  <div class="form-group pad-tb-10">
+								    <input class="wid-100" type="email" name="_replyto" id="email" required placeholder="Email">
 								  </div>
 								
-								  <div class="form-group">
-								    <label for="message">Project Deets</label>
-								    <textarea name="message" id="message" required placeholder="Tell me about your tracks..."></textarea>
+								  <div class="form-group pad-tb-10">
+								    <textarea class="wid-100" name="message" id="message" required placeholder="Message"></textarea>
 								  </div>
 								
 								  <input type="text" name="_gotcha" style="display:none" />
