@@ -1,0 +1,33 @@
+@font-face {
+	font-family: 'Charlottenburg';
+	font-stretch: normal;
+	font-display: swap;
+	src: url('charlottenburg/Charlottenburg-Classic.eot');
+	src: local('/charlottenburg/Charlottenburg Classic'), local('/charlottenburg/Charlottenburg-Classic'),
+		url('charlottenburg/Charlottenburg-Classic.eot?#iefix') format('embedded-opentype'),
+		url('charlottenburg/Charlottenburg-Classic.woff2') format('woff2'),
+		url('charlottenburg/Charlottenburg-Classic.woff') format('woff'),
+		url('charlottenburg/Charlottenburg-Classic.ttf') format('truetype');
+	font-weight: 400;
+}
+
+.eacss .charlottenburg {
+	font-family: 'Charlottenburg';
+}
+
+@font-face {
+	font-family: 'Charlottenburg-Circles';
+	font-stretch: normal;
+	font-display: swap;
+	src: url('charlottenburg/Charlottenburg-Circles.eot');
+	src: local('/charlottenburg/Charlottenburg Circles'), local('/charlottenburg/Charlottenburg-Circles'),
+		url('charlottenburg/Charlottenburg-Circles.eot?#iefix') format('embedded-opentype'),
+		url('charlottenburg/Charlottenburg-Circles.woff2') format('woff2'),
+		url('charlottenburg/Charlottenburg-Circles.woff') format('woff'),
+		url('charlottenburg/Charlottenburg-Circles.ttf') format('truetype');
+	font-weight: 400;
+}
+
+.eacss .charlottenburg-circles {
+	font-family: 'Charlottenburg-Circles';
+}

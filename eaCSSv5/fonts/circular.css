@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Circular Lt';
+	font-stretch: normal;
+	font-display: swap;
+    src: url('circular/CircularXXWeb-Light.woff2') format('woff2'),
+         url('circular/CircularXXWeb-Light.woff') format('woff');
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'Circular Lt';
+	font-stretch: normal;
+	font-display: swap;
+    src: url('circular/CircularXXWeb-LightItalic.woff2') format('woff2'),
+         url('circular/CircularXXWeb-LightItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Circular Lt';
+	font-stretch: normal;
+	font-display: swap;
+    src: url('circular/CircularXXWeb-Thin.woff2') format('woff2'),
+         url('circular/CircularXXWeb-Thin.woff') format('woff');
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'Circular Lt';
+	font-stretch: normal;
+	font-display: swap;
+    src: url('circular/CircularXXWeb-ThinItalic.woff2') format('woff2'),
+         url('circular/CircularXXWeb-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;font-display: swap;
+}
+/* SET DEFAULT FONT */
+.eacss .circular,
+.eacss .sans {
+    font-family: "Circular", sans-serif;
+    font-weight: 400;
+}
+.eacss .circular-lt,
+.eacss .circular-light,
+.eacss .circular.light,
+.eacss .circular .light {
+    font-family: 'Circular Lt';
+    font-weight: 200;
+}

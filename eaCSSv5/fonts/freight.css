@@ -1,0 +1,103 @@
+@font-face {
+	font-family: "freight-display-pro";
+	src:url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/11/c3476bb2-52f1-4c9d-946b-8d1474b86e83.eot?#iefix");
+	src:url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/11/c3476bb2-52f1-4c9d-946b-8d1474b86e83.eot?#iefix") format("eot"),url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/11/6dc7f430-b1fb-47e3-a09f-5351bbf8a02f.woff2") format("woff2"),url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/11/f73edfa9-3357-4991-8f88-a5f9eb86957b.woff") format("woff"),url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/11/3f659317-12c0-4254-9656-975ea837560b.ttf") format("truetype");
+	font-display: auto;
+	font-style: normal;
+	font-weight: 300;
+	font-variant: lining-nums;
+	-moz-font-feature-settings: "lnum";
+	-webkit-font-feature-settings: "lnum";
+	font-feature-settings: "lnum";
+}
+@font-face {
+	font-family: "freight-display-pro";
+	src:url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/12/90989b43-e43e-42f2-bab0-a0c007f30678.eot?#iefix");
+	src:url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/12/90989b43-e43e-42f2-bab0-a0c007f30678.eot?#iefix") format("eot"),url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/12/d4efaa05-9ec3-46f1-b524-0b0232894443.woff2") format("woff2"),url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/12/8d7e723c-2b8b-46e8-b70a-3e1d60c69750.woff") format("woff"),url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/12/c35c23ae-e637-4dc9-8399-76a9d962ab92.ttf") format("truetype");
+	font-display: auto;
+	font-style: italic;
+	font-weight: 300;
+	font-variant: lining-nums;
+	-moz-font-feature-settings: "lnum";
+	-webkit-font-feature-settings: "lnum";
+	font-feature-settings: "lnum";
+}
+@font-face {
+	font-family: "freight-display-pro";
+	src:url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/5177681/f0d20ac1-ee73-472c-a296-9abeafc5e85e.eot?#iefix");
+	src:url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/5177681/f0d20ac1-ee73-472c-a296-9abeafc5e85e.eot?#iefix") format("eot"),url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/5177681/447af7e4-2e21-458c-ba12-d4dc2a4da89b.woff2") format("woff2"),url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/5177681/cae1c21a-b45d-496e-b432-0ca39a68c8df.woff") format("woff"),url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/5177681/e3802423-5f9d-4c7a-9b4a-5e87cb8001e4.ttf") format("truetype");
+	font-display: auto;
+	font-style: normal;
+	font-weight: 400;
+	font-variant: lining-nums;
+	-moz-font-feature-settings: "lnum";
+	-webkit-font-feature-settings: "lnum";
+	font-feature-settings: "lnum";
+}
+@font-face {
+	font-family: "freight-display-pro";
+	src:url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/5174649/d33f6d3a-e5f3-4e7e-82ff-5134bb13a5c6.eot?#iefix");
+	src:url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/5174649/d33f6d3a-e5f3-4e7e-82ff-5134bb13a5c6.eot?#iefix") format("eot"),url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/5174649/8d0bddfb-89fe-49f7-9c53-e8d9f9d309ed.woff2") format("woff2"),url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/5174649/7d356d28-fd0f-44dc-809a-980b7b2cfc5a.woff") format("woff"),url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/5174649/590edda7-80fc-4aaf-afac-78e9c18d0c4c.ttf") format("truetype");
+	font-display: auto;
+	font-style: italic;
+	font-weight: 400;
+	font-variant: lining-nums;
+	-moz-font-feature-settings: "lnum";
+	-webkit-font-feature-settings: "lnum";
+	font-feature-settings: "lnum";
+}
+@font-face {
+	font-family: "freight-display-pro";
+	src:url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/13/329f9fd3-2339-480b-a0b8-571246800f64.eot?#iefix");
+	src:url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/13/329f9fd3-2339-480b-a0b8-571246800f64.eot?#iefix") format("eot"),url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/13/aed99753-8ebb-4eeb-aaad-7c03409ae052.woff2") format("woff2"),url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/13/2f3f917d-2dbb-47d5-b0b2-92c5170aef95.woff") format("woff"),url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/13/bf513acf-3637-48c9-a4ce-173513934bca.ttf") format("truetype");
+	font-display: auto;
+	font-style: normal;
+	font-weight: 600;
+	font-variant: lining-nums;
+	-moz-font-feature-settings: "lnum";
+	-webkit-font-feature-settings: "lnum";
+	font-feature-settings: "lnum";
+}
+@font-face {
+	font-family: "freight-display-pro";
+	src:url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/14/e924fc1f-6e69-4960-9fbb-d08aebcc08a2.eot?#iefix");
+	src:url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/14/e924fc1f-6e69-4960-9fbb-d08aebcc08a2.eot?#iefix") format("eot"),url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/14/8346a657-58cb-4745-bfb5-b67adb4a1924.woff2") format("woff2"),url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/14/8499130c-558a-4b39-930b-c11d1470a3e0.woff") format("woff"),url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/14/282dfd4b-030b-44bb-90c9-4f6c6e3493ec.ttf") format("truetype");
+	font-display: auto;
+	font-style: italic;
+	font-weight: 600;
+	font-variant: lining-nums;
+	-moz-font-feature-settings: "lnum";
+	-webkit-font-feature-settings: "lnum";
+	font-feature-settings: "lnum";
+}
+@font-face {
+	font-family: "freight-display-pro";
+	src:url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/15/21452dbd-aa41-4f9b-85a7-4b63efb02b04.eot?#iefix");
+	src:url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/15/21452dbd-aa41-4f9b-85a7-4b63efb02b04.eot?#iefix") format("eot"),url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/15/7af0d6a0-58ca-4d2f-9291-ac231b18d504.woff2") format("woff2"),url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/15/288c6e9e-ee03-4d1f-bdcd-ea9d0597c54f.woff") format("woff"),url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/15/a7c113d5-ec58-4a35-8e20-674196c0bd5c.ttf") format("truetype");
+	font-display: auto;
+	font-style: normal;
+	font-weight: 700;
+	font-variant: lining-nums;
+	-moz-font-feature-settings: "lnum";
+	-webkit-font-feature-settings: "lnum";
+	font-feature-settings: "lnum";
+}
+@font-face {
+	font-family: "freight-display-pro";
+	src:url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/16/bfab7605-e3b7-4487-bdd7-9b9ed84eca25.eot?#iefix");
+	src:url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/16/bfab7605-e3b7-4487-bdd7-9b9ed84eca25.eot?#iefix") format("eot"),url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/16/0421a3db-52db-47a5-80d8-51a0884de119.woff2") format("woff2"),url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/16/3ef23e7a-c18a-4c75-894d-00aafeb55304.woff") format("woff"),url("https://www.davidjones.com/images/assetimages/frontend/fonts/Freight/16/10b37526-88ef-45b2-9632-74aecc910706.ttf") format("truetype");
+	font-display: auto;
+	font-style: italic;
+	font-weight: 700;
+	font-variant: lining-nums;
+	-moz-font-feature-settings: "lnum";
+	-webkit-font-feature-settings: "lnum";
+	font-feature-settings: "lnum";
+}
+/* SET DEFAULT FONT */
+.eacss, .eacss .freight {
+	font-family: "freight-display-pro", serif;
+	font-variant-numeric: lining-nums;
+	font-weight: 400;
+	font-size: 16px;
+}

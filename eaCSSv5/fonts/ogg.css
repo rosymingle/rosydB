@@ -1,0 +1,177 @@
+/* ogg FONT */
+@font-face {
+	font-family: "Ogg";
+	font-stretch: normal;
+	font-display: swap;
+	src:url("ogg/Ogg-Thin.eot?#iefix");
+	src:url("ogg/Ogg-Thin.eot?#iefix") format("eot"),
+	url("ogg/Ogg-Thin.woff2") format("woff2"),
+	url("ogg/Ogg-Thin.woff") format("woff"),
+	url("ogg/Ogg-Thin.otf") format("otf"),
+	url("ogg/Ogg-Thin.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 200;
+	font-variant: lining-nums;
+	-moz-font-feature-settings: "lnum";
+	-webkit-font-feature-settings: "lnum";
+	font-feature-settings: "lnum";
+}
+@font-face {
+	font-family: "Ogg";
+	font-stretch: normal;
+	font-display: swap;
+	src:url("ogg/Ogg-ThinItalic.eot?#iefix");
+	src:url("ogg/Ogg-ThinItalic.eot?#iefix") format("eot"),
+	url("ogg/Ogg-ThinItalic.woff2") format("woff2"),
+	url("ogg/Ogg-ThinItalic.woff") format("woff"),
+	url("ogg/Ogg-ThinItalic.otf") format("otf"),
+	url("ogg/Ogg-ThinItalic.ttf") format("truetype");
+	font-style: italic;
+	font-weight: 200;
+	font-variant: lining-nums;
+	-moz-font-feature-settings: "lnum";
+	-webkit-font-feature-settings: "lnum";
+	font-feature-settings: "lnum";
+}
+@font-face {
+	font-family: "Ogg";
+	font-stretch: normal;
+	font-display: swap;
+	src:url("ogg/Ogg-Light.eot?#iefix");
+	src:url("ogg/Ogg-Light.eot?#iefix") format("eot"),
+	url("ogg/Ogg-Light.woff2") format("woff2"),
+	url("ogg/Ogg-Light.woff") format("woff"),
+	url("ogg/Ogg-Light.otf") format("otf"),
+	url("ogg/Ogg-Light.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 300;
+	font-variant: lining-nums;
+	-moz-font-feature-settings: "lnum";
+	-webkit-font-feature-settings: "lnum";
+	font-feature-settings: "lnum";
+}
+@font-face {
+	font-family: "Ogg";
+	font-stretch: normal;
+	font-display: swap;
+	src:url("ogg/Ogg-LightItalic.eot?#iefix");
+	src:url("ogg/Ogg-LightItalic.eot?#iefix") format("eot"),
+	url("ogg/Ogg-LightItalic.woff2") format("woff2"),
+	url("ogg/Ogg-LightItalic.woff") format("woff"),
+	url("ogg/Ogg-LightItalic.otf") format("otf"),
+	url("ogg/Ogg-LightItalic.ttf") format("truetype");
+	font-style: italic;
+	font-weight: 300;
+	font-variant: lining-nums;
+	-moz-font-feature-settings: "lnum";
+	-webkit-font-feature-settings: "lnum";
+	font-feature-settings: "lnum";
+}
+@font-face {
+	font-family: "Ogg";
+	font-stretch: normal;
+	font-display: swap;
+	src:url("ogg/Ogg-Regular.eot?#iefix");
+	src:url("ogg/Ogg-Regular.eot?#iefix") format("eot"),
+	url("ogg/Ogg-Regular.woff2") format("woff2"),
+	url("ogg/Ogg-Regular.woff") format("woff"),
+	url("ogg/Ogg-Regular.otf") format("otf"),
+	url("ogg/Ogg-Regular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 400;
+	font-variant: lining-nums;
+	-moz-font-feature-settings: "lnum";
+	-webkit-font-feature-settings: "lnum";
+	font-feature-settings: "lnum";
+}
+@font-face {
+	font-family: "Ogg";
+	font-stretch: normal;
+	font-display: swap;
+	src:url("ogg/Ogg-RegularItalic.eot?#iefix");
+	src:url("ogg/Ogg-RegularItalic.eot?#iefix") format("eot"),
+	url("ogg/Ogg-RegularItalic.woff2") format("woff2"),
+	url("ogg/Ogg-RegularItalic.woff") format("woff"),
+	url("ogg/Ogg-RegularItalic.otf") format("otf"),
+	url("ogg/Ogg-RegularItalic.ttf") format("truetype");
+	font-style: italic;
+	font-weight: 400;
+	font-variant: lining-nums;
+	-moz-font-feature-settings: "lnum";
+	-webkit-font-feature-settings: "lnum";
+	font-feature-settings: "lnum";
+}
+@font-face {
+	font-family: "Ogg";
+	font-stretch: normal;
+	font-display: swap;
+	src:url("ogg/Ogg-Medium.eot?#iefix");
+	src:url("ogg/Ogg-Medium.eot?#iefix") format("eot"),
+	url("ogg/Ogg-Medium.woff2") format("woff2"),
+	url("ogg/Ogg-Medium.woff") format("woff"),
+	url("ogg/Ogg-Medium.otf") format("otf"),
+	url("ogg/Ogg-Medium.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 600;
+	font-variant: lining-nums;
+	-moz-font-feature-settings: "lnum";
+	-webkit-font-feature-settings: "lnum";
+	font-feature-settings: "lnum";
+}
+@font-face {
+	font-family: "Ogg";
+	font-stretch: normal;
+	font-display: swap;
+	src:url("ogg/Ogg-MediumItalic.eot?#iefix");
+	src:url("ogg/Ogg-MediumItalic.eot?#iefix") format("eot"),
+	url("ogg/Ogg-MediumItalic.woff2") format("woff2"),
+	url("ogg/Ogg-MediumItalic.woff") format("woff"),
+	url("ogg/Ogg-MediumItalic.otf") format("otf"),
+	url("ogg/Ogg-MediumItalic.ttf") format("truetype");
+	font-style: italic;
+	font-weight: 600;
+	font-variant: lining-nums;
+	-moz-font-feature-settings: "lnum";
+	-webkit-font-feature-settings: "lnum";
+	font-feature-settings: "lnum";
+}
+@font-face {
+	font-family: "Ogg";
+	font-stretch: normal;
+	font-display: swap;
+	src:url("ogg/Ogg-Bold.eot?#iefix");
+	src:url("ogg/Ogg-Bold.eot?#iefix") format("eot"),
+	url("ogg/Ogg-Bold.woff2") format("woff2"),
+	url("ogg/Ogg-Bold.woff") format("woff"),
+	url("ogg/Ogg-Bold.otf") format("otf"),
+	url("ogg/Ogg-Bold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 700;
+	font-variant: lining-nums;
+	-moz-font-feature-settings: "lnum";
+	-webkit-font-feature-settings: "lnum";
+	font-feature-settings: "lnum";
+}
+@font-face {
+	font-family: "Ogg";
+	font-stretch: normal;
+	font-display: swap;
+	src:url("ogg/Ogg-BoldItalic.eot?#iefix");
+	src:url("ogg/Ogg-BoldItalic.eot?#iefix") format("eot"),
+	url("ogg/Ogg-BoldItalic.woff2") format("woff2"),
+	url("ogg/Ogg-BoldItalic.woff") format("woff"),
+	url("ogg/Ogg-BoldItalic.otf") format("otf"),
+	url("ogg/Ogg-BoldItalic.ttf") format("truetype");
+	font-style: italic;
+	font-weight: 700;
+	font-variant: lining-nums;
+	-moz-font-feature-settings: "lnum";
+	-webkit-font-feature-settings: "lnum";
+	font-feature-settings: "lnum";
+}
+
+.eacss .ogg {
+	font-family: "Ogg", serif;
+	font-variant-numeric: lining-nums;
+	font-weight: 300;
+}
