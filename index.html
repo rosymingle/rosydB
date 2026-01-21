@@ -42,7 +42,7 @@
 				
 
 				<div class="" id="about">
-					<div class="space-dj"></div>
+					<div class="space-100"></div>
 					<div class="pad-lr-20 m-pad-lr-15">
 						<div class="wrapper-800">
 							<h3>about</h2>
@@ -54,7 +54,7 @@
 				
 
 				<div class="" id="portfolio">
-					<div class="space-dj"></div>
+					<div class="space-100"></div>
 					<div class="pad-lr-20 m-pad-lr-15">
 						<div class="wrapper-800">
 							<h3>portfolio</h2>
@@ -66,15 +66,67 @@
 				
 
 				<div class="" id="contact">
-					<div class="space-dj"></div>
+					<div class="space-100"></div>
 					<div class="pad-lr-20 m-pad-lr-15">
 						<div class="wrapper-800">
 							<h3>contact</h2>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
+							<p><span class="fw-5 ls-n06" style="color:#ff99cc">rosy<span class="fw-6 ls-n12" style="color:#009090">dB</span> is based Melbourne.</p>
+							<a href="#" id="phone-link" class="cta-border rosy-contact"><span id="phone-text">call rosy</span></a>
+							<script>
+								document.addEventListener("DOMContentLoaded", () => {
+								  const phoneLink = document.getElementById("phone-link");
+								  const phoneText = document.getElementById("phone-text");
+								
+								  // Your number split up so it's not a searchable string
+								  // Let's assume your number is 0412 345 678
+								  const part1 = "0467";
+								  const part2 = "060";
+								  const part3 = "852";
+								
+								  phoneLink.addEventListener("click", (e) => {
+								    // Prevent the page from jumping if the link is clicked
+								    if (phoneLink.getAttribute("href") === "#") {
+								      e.preventDefault();
+								
+								      const fullNumber = `${part1} ${part2} ${part3}`;
+								      const dialNumber = `${part1}${part2}${part3}`;
+								
+								      // Update the UI
+								      phoneText.innerText = fullNumber;
+								      phoneLink.href = `tel:${dialNumber}`;
+								
+								      // Optional: Add a class to show it's "unlocked"
+								      phoneLink.style.borderColor = "#00FF00"; // Success green!
+								    }
+								  });
+								});
+							</script>
+							<form action="https://formspree.io/f/mreeyndk" method="POST" class="rosy-form">
+								
+								  <div class="form-group">
+								    <label for="name">Name / Band Name</label>
+								    <input type="text" name="name" id="name" required placeholder="Who are you?">
+								  </div>
+								
+								  <div class="form-group">
+								    <label for="email">Email Address</label>
+								    <input type="email" name="_replyto" id="email" required placeholder="Where do I reply?">
+								  </div>
+								
+								  <div class="form-group">
+								    <label for="message">Project Deets</label>
+								    <textarea name="message" id="message" required placeholder="Tell me about your tracks..."></textarea>
+								  </div>
+								
+								  <input type="text" name="_gotcha" style="display:none" />
+								
+								  <button type="submit" class="rosy-submit">Send</button>
+								
+							</form>
 						</div>
 					</div>
 				</div>
-				<div class="space-dj"></div>
+				<div class="space-100"></div>
 
 				
 				
