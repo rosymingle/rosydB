@@ -29,10 +29,10 @@
 				<div class="wrapper-800 flex flex-jc-spbt">
 				
 					<h1 class="fs-ttl m-fs-26 mrgn-b-0 fw-5 ls-n06 pink flex">
-						<img class="pos-r" src="eaCSSv5/assets/logo.png" style="width: 0.666em; bottom: 0.01em;" />
-						<div style="padding-left: 0.02em">
+						<div style="padding-right: 0.1em">
 							rosy<span class="fw-6 ls-n12 teal">dB</span>
 						</div>
+						<img class="pos-r" src="eaCSSv5/assets/logo.png" style="width: 0.666em; bottom: 0.01em;" />
 					</h1>
 	
 					<nav class="t-align-r">
@@ -161,61 +161,53 @@
 				<div class="" id="contact">
 					<div class="space-100"></div>
 					<div class="pad-lr-20 m-pad-lr-15">
-						<div class="wrapper-800">
+						<div class="wrapper-800 m-wrapper-350">
 							<h3 class="teal">contact</h3>
-							<p class="fs-copy">rosydB is based Melbourne.</p>
-							<a href="#" id="phone-link" class="cta-border rosy-contact"><span id="phone-text">call rosydB</span></a>
-							<script>
-								document.addEventListener("DOMContentLoaded", () => {
-								  const phoneLink = document.getElementById("phone-link");
-								  const phoneText = document.getElementById("phone-text");
-								
-								  // Your number split up so it's not a searchable string
-								  // Let's assume your number is 0412 345 678
-								  const part1 = "0467";
-								  const part2 = "060";
-								  const part3 = "852";
-								
-								  phoneLink.addEventListener("click", (e) => {
-								    // Prevent the page from jumping if the link is clicked
-								    if (phoneLink.getAttribute("href") === "#") {
-								      e.preventDefault();
-								
-								      const fullNumber = `${part1} ${part2} ${part3}`;
-								      const dialNumber = `${part1}${part2}${part3}`;
-								
-								      // Update the UI
-								      phoneText.innerText = fullNumber;
-								      phoneLink.href = `tel:${dialNumber}`;
-								
-								      // Optional: Add a class to show it's "unlocked"
-								      phoneLink.style.borderColor = "#00FF00"; // Success green!
-								    }
-								  });
-								});
-							</script>
-							<div class="space-50"></div>
-							<p class="fs-copy">Or send rosydB a message using this form.</p>
-							<form action="https://formspree.io/f/mreeyndk" method="POST" class="wrapper-300 rosy-form">
-								
-								  <div class="form-group pad-b-10">
-								    <input class="wid-100 pad-10 brdr-1 brad-5" type="text" name="name" id="name" required placeholder="Name">
-								  </div>
-								
-								  <div class="form-group pad-b-10">
-								    <input class="wid-100 pad-10 brdr-1 brad-5" type="email" name="_replyto" id="email" required placeholder="Email">
-								  </div>
-								
-								  <div class="form-group pad-b-10">
-								    <textarea class="wid-100 h-200 brdr-1 brad-5 pad-10 circular" name="message" id="message" required placeholder="Message"></textarea>
-								  </div>
-								
-								  <input type="text" name="_gotcha" style="display:none" />
-								
-								  <button type="submit" class="cta-solid brdr-0 pad-lr-20 pad-b-9 rosy-submit">Send</button>
-								
-							</form>
-							
+							<div class="flex m-unflex">
+								<img class="float-l mrgn-r-30 mrgn-b-20 m-float-n m-mrgn-lr-a" src="eaCSSv5/assets/studio6.jpg" style="max-width: 350px;" />
+								<div class="pad-l-30 m-pad-l-0">
+									<p class="fs-copy">rosydB is based in Naarm (Melbourne).</p>
+									<a href="#" id="phone-link" class="cta-border rosy-contact"><span id="phone-text">call rosydB</span></a>
+									<script>
+										document.addEventListener("DOMContentLoaded", () => {
+										  const phoneLink = document.getElementById("phone-link");
+										  const phoneText = document.getElementById("phone-text");
+										  const part1 = "0467";
+										  const part2 = "060";
+										  const part3 = "852";
+										
+										  phoneLink.addEventListener("click", (e) => {
+										    if (phoneLink.getAttribute("href") === "#") {
+										      e.preventDefault();
+										
+										      const fullNumber = `${part1} ${part2} ${part3}`;
+										      const dialNumber = `${part1}${part2}${part3}`;
+										
+										      phoneText.innerText = fullNumber;
+										      phoneLink.href = `tel:${dialNumber}`;
+										
+										      phoneLink.style.borderColor = "#00FF00";
+										    }
+										  });
+										});
+									</script>
+									<div class="space-50"></div>
+									<p class="fs-copy fs-16">Or email rosydB using this form.</p>
+									<form action="https://formspree.io/f/mreeyndk" method="POST" class="wrapper-350 rosy-form">
+										  <div class="form-group pad-b-10">
+										    <input class="wid-100 pad-10 brdr-1 brad-5" type="text" name="name" id="name" required placeholder="Name">
+										  </div>
+										  <div class="form-group pad-b-10">
+										    <input class="wid-100 pad-10 brdr-1 brad-5" type="email" name="_replyto" id="email" required placeholder="Email">
+										  </div>
+										  <div class="form-group pad-b-10">
+										    <textarea class="wid-100 h-200 brdr-1 brad-5 pad-10 circular" name="message" id="message" required placeholder="Message"></textarea>
+										  </div>
+										  <input type="text" name="_gotcha" style="display:none" />
+										  <button type="submit" class="cta-solid brdr-0 pad-lr-20 pad-b-9 rosy-submit">Send</button>
+									</form>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
