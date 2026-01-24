@@ -15,7 +15,7 @@
 		.pink { color: #ff99cc; }
 		.bg-pink { background-color: #ff99cc; }
 		.teal { color: #009090; }
-		.bg-teal { background-color: #009090; }
+		.bg-teal { background-color: #009090 !important; }
 		ul.fs-copy {}
 	</style>
 </head>
@@ -194,7 +194,7 @@
 										      phoneText.innerText = fullNumber;
 										      phoneLink.href = `tel:${dialNumber}`;
 										
-										      phoneLink.style.borderColor = "#00FF00";
+										      phoneLink.style.borderColor = "#009090";
 										    }
 										  });
 										});
@@ -212,7 +212,7 @@
 										    <textarea class="wid-100 h-200 brdr-1 brad-5 pad-10 circular" name="message" id="message" required placeholder="message"></textarea>
 										  </div>
 										  <input type="text" name="_gotcha" style="display:none" />
-										  <button type="submit" class="cta-solid brdr-0 pad-lr-20 pad-b-9 rosy-submit">send</button>
+										  <button type="submit" class="cta-solid brdr-0 pad-lr-20 pad-b-10 rosy-submit">send</button>
 									</form>
 								</div>
 							</div>
@@ -262,7 +262,7 @@
 									</script>
 								</div>
 								<div>
-									<div class="m-wrapper-350 t-align-l">
+									<div class="m-wrapper-260 t-align-l">
 										<ol id="playlist-links" class="fs-copy fs-13">
 											<li class="mrgn-b-5"><a href="#" data-video-id="mAYVjbowOsA" style="font-weight: bold; color: rgb(0, 144, 144);">Katamari on the Rhodes</a></li>
 											<li class="mrgn-b-5"><a href="#" data-video-id="mB6savC1Mok">Feel Good Inc [Gorillaz]</a></li>
