@@ -190,29 +190,6 @@
 									<h3 class="teal">contact</h3>
 									<p class="fs-copy">rosydB is based in Naarm (Melbourne).</p>
 									<a href="#" id="phone-link" class="cta-border rosy-contact"><span id="phone-text">call rosydB</span></a>
-									<script>
-										document.addEventListener("DOMContentLoaded", () => {
-										  const phoneLink = document.getElementById("phone-link");
-										  const phoneText = document.getElementById("phone-text");
-										  const part1 = "0467";
-										  const part2 = "060";
-										  const part3 = "852";
-										
-										  phoneLink.addEventListener("click", (e) => {
-										    if (phoneLink.getAttribute("href") === "#") {
-										      e.preventDefault();
-										
-										      const fullNumber = `${part1} ${part2} ${part3}`;
-										      const dialNumber = `${part1}${part2}${part3}`;
-										
-										      phoneText.innerText = fullNumber;
-										      phoneLink.href = `tel:${dialNumber}`;
-										
-										      phoneLink.style.borderColor = "#009090";
-										    }
-										  });
-										});
-									</script>
 									<div class="space-50"></div>
 									<p class="fs-copy fs-16">Or send an email using this form.</p>
 									<form action="https://formspree.io/f/mreeyndk" method="POST" class="wrapper-450 rosy-form">
@@ -263,32 +240,6 @@
 									<div class="pos-r" style="padding-bottom:  56.25%">
 										<iframe id="vidframe" class="pos-a-trbl wid-100 h-100p" width="100%" height="100%" src="https://www.youtube.com/embed/mAYVjbowOsA?si=OR9H1bs0LI-0ZPl6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 									</div>
-									<script>
-										document.addEventListener('DOMContentLoaded', () => {
-									    const frame = document.getElementById('vidframe');
-									    const links = document.querySelectorAll('#playlist-links a');
-									
-									    links.forEach(link => {
-									        link.addEventListener('click', (e) => {
-									            e.preventDefault(); // Stop the page from jumping to the top
-									
-									            // 1. Grab the ID from the data attribute
-									            const videoId = link.getAttribute('data-video-id');
-									
-									            // 2. Update the iframe src (keeping your settings intact)
-									            frame.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
-									
-									            // 3. Optional: Sassy UI Polish
-									            // Remove 'active' class from all, add to the clicked one
-									            links.forEach(l => l.style.fontWeight = 'normal');
-									            links.forEach(l => l.style.color = 'inherit');
-									            
-									            link.style.fontWeight = 'bold';
-									            link.style.color = '#009090'; // Using your 'teal' brand color
-									        });
-									    });
-									});
-									</script>
 								</div>
 								<div>
 									<div class="m-wrapper-260 t-align-l">
@@ -337,6 +288,53 @@
 		</div>
 	</div>
 
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+		  const phoneLink = document.getElementById("phone-link");
+		  const phoneText = document.getElementById("phone-text");
+		  const part1 = "0467";
+		  const part2 = "060";
+		  const part3 = "852";
+		
+		  phoneLink.addEventListener("click", (e) => {
+			if (phoneLink.getAttribute("href") === "#") {
+			  e.preventDefault();
+		
+			  const fullNumber = `${part1} ${part2} ${part3}`;
+			  const dialNumber = `${part1}${part2}${part3}`;
+		
+			  phoneText.innerText = fullNumber;
+			  phoneLink.href = `tel:${dialNumber}`;
+		
+			  phoneLink.style.borderColor = "#009090";
+			}
+		  });
+		});
+		document.addEventListener('DOMContentLoaded', () => {
+			const frame = document.getElementById('vidframe');
+			const links = document.querySelectorAll('#playlist-links a');
+		
+			links.forEach(link => {
+				link.addEventListener('click', (e) => {
+					e.preventDefault(); // Stop the page from jumping to the top
+		
+					// 1. Grab the ID from the data attribute
+					const videoId = link.getAttribute('data-video-id');
+		
+					// 2. Update the iframe src (keeping your settings intact)
+					frame.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+		
+					// 3. Optional: Sassy UI Polish
+					// Remove 'active' class from all, add to the clicked one
+					links.forEach(l => l.style.fontWeight = 'normal');
+					links.forEach(l => l.style.color = 'inherit');
+					
+					link.style.fontWeight = 'bold';
+					link.style.color = '#009090'; // Using your 'teal' brand color
+				});
+			});
+		});
+	</script>
 </body>
 
 </html>
