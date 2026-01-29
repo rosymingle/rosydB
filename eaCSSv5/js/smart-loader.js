@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
 					if (bg) bg.style.display = 'none';
 
 					document.body.style.overflow = 'auto';
-				}, 1000);
+				}, 100);
 			});
 		}
 
