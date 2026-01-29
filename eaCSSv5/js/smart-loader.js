@@ -134,25 +134,23 @@ document.addEventListener("DOMContentLoaded", () => {
 		showPreloader() {
 			const preloaderImage = document.createElement("img");
 			preloaderImage.id = 'pre-load-gif';
-			preloaderImage.src = 'https://res.cloudinary.com/david-jones/image/upload/f_auto,q_auto/v8/eacss/v4/img/spin.gif';
+			preloaderImage.src = '/eaCSSv5/img/loading.gif';
 			preloaderImage.style = `
 				display: block;
 				position: absolute;
 				left: 50%;
 				top: 50%;
 				margin: 0;
-				width: 64px;
-				height: 64px;
+				width: 50px;
+				height: 50px;
 				transform: translate(-50%, -50%);
 			`;
-
-			const wbn = window.outerWidth < 1024 ? '70px' : '150px';
 
 			const preloaderContainer = document.createElement("div");
 			preloaderContainer.id = 'pre-load-bg';
 			preloaderContainer.style = `
 				position: fixed;
-				top: ${wbn};
+				top: 0;
 				left: 0;
 				right: 0;
 				bottom: 0;
