@@ -71,9 +71,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		loadLazyFiles() {
 			const lazyItems = [
-				{ sel: '.eacss .accordion-section', files: ['js/accordion.min.js', 'accordion.min.css'] },
-				{ sel: '.eacss .countdown', files: ['js/countdown.min.js'] },
-				{ sel: '.eacss .video[data-pid]', files: ['js/video.min.js'] }
+				{ sel: '.eacss .accordion-section', files: ['js/accordion.js', 'accordion.css'] },
+				{ sel: '.eacss .countdown', files: ['js/countdown.js'] },
+				{ sel: '.eacss .video[data-pid]', files: ['js/video.js'] }
 			];
 
 			lazyItems.forEach(({ sel, files, callback }) => {
