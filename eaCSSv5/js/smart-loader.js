@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	class SmartFileLoader {
 		constructor() {
-			this.frontendBase = 'https://www.davidjones.com/images/assetimages/frontend/eacss/v4/';
-			this.versionSuffix = '?v23';
+			this.frontendBase = '/eaCSSv5/';
+			this.versionSuffix = '';
 			this.loadedFiles = new Set();
 			this.observedElements = new WeakSet();
 		}
@@ -186,91 +186,22 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	new SmartFileLoader().init();
-
-	const initSmartSlick = ($slider) => {
-		if ($slider.children().length === 0) return;
-
-		let slickOptions = {};
-		const slickAttr = $slider.attr('data-slick');
-		if (slickAttr) {
-			try {
-				slickOptions = JSON.parse(slickAttr);
-			} catch (e) {
-				console.warn('Invalid data-slick JSON:', slickAttr);
-			}
-		}
-
-		// Handle variableWidth as a shortcut
-		if ($slider.hasClass('variableWidth')) {
-			slickOptions.variableWidth = true;
-			if (!slickAttr) {
-				slickOptions.infinite = false;
-				slickOptions.slidesToScroll = 1;
-			}
-		}
-
-		// Skip if already initialised
-		if ($slider.hasClass('slick-initialized')) return;
-
-		try {
-			$slider.slick(slickOptions);
-		} catch (err) {
-			console.error('Slick initialization failed:', err);
-		}
-
-		// Right-edge correction for variableWidth
-		if ($slider.hasClass('variableWidth')) {
-			$slider.on('setPosition', function () {
-				const $track = $slider.find('.slick-track');
-				const $slides = $slider.find('.slick-slide');
-				const containerWidth = $slider.width();
-				const totalSlideWidth = $slides.toArray().reduce((acc, slide) => acc + $(slide).outerWidth(true), 0);
-
-				if (totalSlideWidth > containerWidth) {
-					const maxScroll = totalSlideWidth - containerWidth;
-					$track.css('transform', `translate3d(-${maxScroll}px, 0, 0)`);
-
-					$slider.off('beforeChange');
-					$slider.on('beforeChange', () => {
-						$track.css('transform', '');
-					});
-				}
-			});
-		}
-	};
-
-	// Watch and re-init on resize
-	const smartSlickObserve = ($slider) => {
-		let wasUnslicked = false;
-
-		const checkAndInit = () => {
-			if (!$slider.hasClass('slick-initialized')) {
-				initSmartSlick($slider);
-				wasUnslicked = false;
-			} else if ($slider.hasClass('unslicked')) {
-				wasUnslicked = true;
-			}
-		};
-
-		checkAndInit();
-
-		const observer = new ResizeObserver(checkAndInit);
-		observer.observe($slider[0]);
-
-		window.addEventListener('resize', () => {
-			setTimeout(checkAndInit, 200); // debounce-ish
-		});
-	};
-
-	// Apply to all
-	$('.slick-data').each(function () {
-		const $slider = $(this);
-		smartSlickObserve($slider);
-	});
-	$('.showthething').click(function() {
-		$(this).parent().find('.thething').slideToggle('fast');
-		$(this).find('.icon').toggleClass('flipthething');
-		return false
+	
+	document.querySelectorAll('.showthething').forEach(button => {
+	    button.addEventListener('click', (e) => {
+	        e.preventDefault();
+	
+	        // 1. Find the target "thing" within the same parent
+	        const target = button.parentElement.querySelector('.thething');
+	        
+	        // 2. Find the icon inside the button
+	        const icon = button.querySelector('.icon');
+	
+	        // 3. Toggle the classes
+	        // Use a CSS class for the 'slide' effect (see below)
+	        target.classList.toggle('is-visible');
+	        icon.classList.toggle('flipthething');
+	    });
 	});
 
 });
