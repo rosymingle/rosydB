@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			preloaderContainer.id = 'pre-load-bg';
 			preloaderContainer.style = `
 				position: fixed;
-				top: 0;
+				top: 59px;
 				left: 0;
 				right: 0;
 				bottom: 0;
