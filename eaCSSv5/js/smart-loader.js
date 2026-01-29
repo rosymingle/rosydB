@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 			if (allClasses.has('preload')) {
 				this.showPreloader();
-				setTimeout(() => coreEls.forEach(el => el.classList.remove('preload')), 500);
+				setTimeout(() => coreEls.forEach(el => el.classList.remove('preload')), 1);
 			}
 
 			coreEls.forEach(el => ['js', 'css'].forEach(type =>
