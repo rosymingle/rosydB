@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				left: 0;
 				right: 0;
 				bottom: 0;
-				background-color: #ffffff;
+				background-color: #ffddee;
 				z-index: 98;
 				-webkit-transition: opacity 300ms, visibility 300ms;
 				transition: opacity 300ms, visibility 300ms;
