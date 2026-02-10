@@ -31,6 +31,21 @@
 			background-image: url('eaCSSv5/assets/logo.png');
 			background-size: contain;
 		}
+		#playlist-links a {
+		    transition: all 0.2s ease-in-out;
+		}
+		#playlist-links a.is-active {
+		    font-weight: bold;
+		    color: #009090;
+		}
+		#playlist-links a.is-active:after {
+		    content: " ";
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			background-image: url('eaCSSv5/img/loading.gif');
+			background-size: contain;
+		}
 	</style>
 </head>
 
@@ -327,7 +342,7 @@
 											<li class="mrgn-b-5"><a href="#" data-video-id="-Y4vxQAZyrs">Riders On The Storm [The Doors]</a></li>
 											<li class="mrgn-b-5"><a href="#" data-video-id="LYEVhGmPEb8">Ramble On [Led Zeppelin]</a></li>
 											<li class="mrgn-b-5"><a href="#" data-video-id="ERA3ZnARg88">Bathroom Girl [Air]</a></li>
-											<li class="mrgn-b-5"><a href="#" data-video-id="ixSYBQBCG7w" style="font-weight: bold; color: rgb(0, 144, 144);">Express Yourself [Charles Wright]</a></li>
+											<li class="mrgn-b-5"><a href="#" data-video-id="ixSYBQBCG7w" class="is-active">Express Yourself [Charles Wright]</a></li>
 											<li class="mrgn-b-5"><a href="#" data-video-id="sKIFhdJgxZE">Jungle Boogie [Kool & The Gang]</a></li>
 											<li class="mrgn-b-5"><a href="#" data-video-id="VRON5mJGaiU">I Want You Back [The Jackson 5]</a></li>
 											<li class="mrgn-b-5"><a href="#" data-video-id="lNBth1r921c">No One Knows [QOTSA]</a></li>
@@ -382,28 +397,23 @@
 		  });
 		});
 		document.addEventListener('DOMContentLoaded', () => {
-			const frame = document.getElementById('vidframe');
-			const links = document.querySelectorAll('#playlist-links a');
+		    const frame = document.getElementById('vidframe');
+		    const links = document.querySelectorAll('#playlist-links a');
 		
-			links.forEach(link => {
-				link.addEventListener('click', (e) => {
-					e.preventDefault(); // Stop the page from jumping to the top
+		    links.forEach(link => {
+		        link.addEventListener('click', (e) => {
+		            e.preventDefault();
 		
-					// 1. Grab the ID from the data attribute
-					const videoId = link.getAttribute('data-video-id');
+		            // 1. Update the iframe
+		            const videoId = link.getAttribute('data-video-id');
+		            frame.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
 		
-					// 2. Update the iframe src (keeping your settings intact)
-					frame.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
-		
-					// 3. Optional: Sassy UI Polish
-					// Remove 'active' class from all, add to the clicked one
-					links.forEach(l => l.style.fontWeight = 'normal');
-					links.forEach(l => l.style.color = 'inherit');
-					
-					link.style.fontWeight = 'bold';
-					link.style.color = '#009090'; // Using your 'teal' brand color
-				});
-			});
+		            // 2. The Class Switcheroo
+		            // Remove 'is-active' from everyone, then give it to the clicked one
+		            links.forEach(l => l.classList.remove('is-active'));
+		            link.classList.add('is-active');
+		        });
+		    });
 		});
 	</script>
 </body>
